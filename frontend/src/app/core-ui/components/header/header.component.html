@@ -1,0 +1,8 @@
+<div class="b-header">
+    <div class="b-header__home" [routerLink]="'/'">🏚️ Trello Copy</div>
+    <div class="b-header__login">
+        <button class="b-header__button" [routerLink]="'login'" *ngIf="!isLoggedIn()">Login</button>
+        <button [routerLink]="'register'" *ngIf="!isLoggedIn()">Register</button>
+        <button class="b-header__button" (click)="onLogout()" *ngIf="isLoggedIn()">Logout</button>
+    </div>
+</div>
